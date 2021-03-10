@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react-router-dom';
+import React from 'react';
+import {Switch,Route,Redirect} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import Home from './Home.jsx';
+import Contact from './Contact.jsx';
+import About from './About.jsx';
+import Services from './Services.jsx';
+import Nav from './Navbar.jsx';
 
-function App() {
+const Main=()=>{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Nav/>
+    <Switch>
+    <Route exact  path="/" component={Home}/>
+    <Route exact path="/Contact" component={Contact}/>
+    <Route exact path="/About" component={About}/>
+    <Route exact path="/Services" component={Services}/>
+    <Redirect to="/"/>
+    </Switch>
+    </>
+  )
 }
-
-export default App;
+export default Main; 

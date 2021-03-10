@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar li {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    font-family: 'Akaya Telivigala', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-brand {
+    font-size: 2.5rem;
+    font-family: 'Akaya Telivigala', cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar li .nav-link {
+    color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar li .nav-link:hover {
+    color: blue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Menu-active {
+    border-bottom: 2px solid blue;
+}
+
+.navbar-brand {
+    color: rgb(45, 86, 201);
+}
+
+#header .animated {
+    animation: up-down 1.7s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+.card {
+    width: 70%;
+    height: 50%;
+}
+
+.card img {
+    width: 100%;
 }
